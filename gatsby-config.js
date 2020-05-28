@@ -47,6 +47,18 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    // {
+    //   resolve: `gatsby-plugin-google-fonts-v2`,
+    //   options: {
+    //     fonts: [
+    //       {
+    //         family: "Vollkorn",
+    //         variable: true,
+    //         weights: ["400..900"],
+    //       },
+    //     ],
+    //   },
+    // },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // 'gatsby-plugin-offline',

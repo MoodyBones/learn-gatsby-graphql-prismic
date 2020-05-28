@@ -2,18 +2,31 @@
   -webkit-font-smoothing: antialiased;
 }
 ::selection {
-  background: #FFF7C7; /* WebKit/Blink Browsers */
+  background: #fff7c7; /* WebKit/Blink Browsers */
 }
 ::-moz-selection {
-  background: #FFF7C7; /* Gecko Browsers */
+  background: #fff7c7; /* Gecko Browsers */
 }
 
 body {
   padding: 3rem 0 0 0;
-  color: #353535;
+  color: #414141;
+  // background-color: rgb(240, 243, 244);
+  background: #778beb; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #778beb,
+    #fff
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #778beb,
+    #fff
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   line-height: 1.5;
-  font-family: $font-serif;
-  font-size: 20px;
+  font-family: $font-sans-serif;
+  font-size: 16px;
 
   @media (max-width: $max-width-sm) {
     padding-top: 1rem;
