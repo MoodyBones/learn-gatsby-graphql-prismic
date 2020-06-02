@@ -52,8 +52,8 @@ const BlogHomeHead = ({ home }) => {
   const avatar = { backgroundImage: "url(" + home.image.url + ")" }
   return (
     <div className="home-header" data-wio-id={home._meta.id}>
-      {/* <div className="blog-avatar" style={avatar}></div> */}
-      <h1>{RichText.asText(home.headline)}</h1>
+      <h1 className="blog-name">{RichText.asText(home.headline)}</h1>
+      <div className="blog-avatar" style={avatar}></div>
       <p className="blog-description">{RichText.asText(home.description)}</p>
     </div>
   )

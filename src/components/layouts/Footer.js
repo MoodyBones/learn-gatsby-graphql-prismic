@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
+import { Link } from "gatsby"
 
 const Footer = styled.footer`
   padding: 20px;
@@ -8,12 +9,18 @@ const Footer = styled.footer`
   bottom: 0px;
   height: 70px;
   width: 100%;
+  background: #1e1e1e;
+  color: white;
 
   display: flex;
   justify-content: space-between;
 
   a {
     text-align: center;
+  }
+
+  .footer-link {
+    color: white;
   }
 `
 
@@ -27,9 +34,9 @@ export default () => (
     >
       S O C I A L | L I N K S
     </a>
-    <a className="footer-link" href="/">
-      <span class="material-icons">home</span>
-    </a>
+    <Link className="footer-link" to="/">
+      <span class="material-icons icon">home</span>
+    </Link>
     <a
       className="footer-link"
       href="https://twitter.com/_moodybones"

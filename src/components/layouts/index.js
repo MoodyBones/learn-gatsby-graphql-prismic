@@ -45,9 +45,8 @@ const Layout = props => {
         <title>{title}</title>
         <meta name="description" content={description} />
         <link
-          href="https://fonts.googleapis.com/css?family=Roboto+Slab:wght@400;900&family=Roboto:wght@300;400;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;900&family=Work+Sans:ital@0;1&display=swap"
           rel="stylesheet"
-          type="text/css"
         ></link>
         <link
           href="https://fonts.googleapis.com/icon?family=Material+Icons"

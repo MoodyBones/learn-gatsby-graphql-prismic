@@ -10,32 +10,43 @@
 
 body {
   padding: 3rem 0 0 0;
-  color: #414141;
+  color: #1e1e1e;
+  background-color: #f7f6f3;
   // background-color: rgb(240, 243, 244);
-  background: #778beb; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to bottom,
-    #778beb,
-    #fff
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to bottom,
-    #778beb,
-    #fff
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  // background: #778beb; /* fallback for old browsers */
+  // background: -webkit-linear-gradient(
+  //   to bottom,
+  //   #778beb,
+  //   #f7f6f3
+  // ); /* Chrome 10-25, Safari 5.1-6 */
+  // background: linear-gradient(
+  //   to bottom,
+  //   #778beb,
+  //   #f7f6f3
+  // ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   line-height: 1.5;
-  font-family: $font-sans-serif;
+  font-family: var(--font-sans-serif);
   font-size: 16px;
 
   @media (max-width: $max-width-sm) {
     padding-top: 1rem;
   }
+
+  * {
+    box-sizing: border-box;
+    &::selection {
+      background: #ffc048;
+      color: white;
+    }
+  }
 }
 
 .container {
-  max-width: 700px;
+  max-width: 900px;
   margin: auto;
+  background: #fff;
+  padding: 3em 2em;
 
   @media (max-width: $max-width-sm) {
     padding: 0 20px;

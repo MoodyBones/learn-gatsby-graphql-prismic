@@ -21,11 +21,14 @@ const StyledBurger = styled.button`
     /* find a11y friendly solution for this */
     outline: none;
   }
+      &:hover span {
+      background: #ffc048;
+    }
 
   span {
     width: 2rem;
     height: 0.25rem;
-    background: ${({ open }) => (open ? "grey" : "black")};
+    background: ${({ open }) => (open ? "white" : "#1e1e1e")};
     /* border-radius: 10px; */
     transition: all 0.3s linear;
     position: relative;
@@ -44,6 +47,8 @@ const StyledBurger = styled.button`
     :nth-child(3) {
       transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
     }
+
+
   }
 `
 

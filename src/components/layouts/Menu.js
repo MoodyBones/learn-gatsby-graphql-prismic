@@ -1,18 +1,21 @@
 import React from "react"
 import { bool } from "prop-types"
+import { Link } from "gatsby"
 import styled from "@emotion/styled"
 
 const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: #ede0dd;
+  background: #1e1e1e;
   height: 100vh;
   text-align: left;
   padding: 2rem;
   position: absolute;
   top: 0;
   right: 0;
+  width: 100%;
+
   transition: transform 0.3s ease-in-out;
   transform: ${({ open }) => (open ? `translateX(0)` : `translateX(100%)`)};
 
@@ -21,12 +24,15 @@ const StyledMenu = styled.nav`
   }
 
   a {
-    font-size: 2rem;
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    font-weight: 900;
     text-transform: uppercase;
+    text-align: center;
     padding: 2rem 0;
-    font-weight: bold;
-    letter-spacing: 0.2rem;
-    color: #616161;
+    letter-spacing: 0.1rem;
+    color: white;
+    line-height: 0.2;
     text-decoration: none;
     transition: color 0.3s linear;
 
@@ -36,7 +42,7 @@ const StyledMenu = styled.nav`
     }
 
     &:hover {
-      color: #c1b4b1;
+      color: #ffc048;
     }
   }
 `
@@ -48,19 +54,29 @@ export function Menu({ open, ...props }) {
   return (
     <StyledMenu open={open} aria-hidden={!isHidden} {...props}>
       <a href="/" tabIndex={tabIndex}>
-        <span aria-hidden="true">
+        {/* <span aria-hidden="true">
           &#x1f481;&#x1f3fb;&#x200d;&#x2642;&#xfe0f;
-        </span>
-        About us
+        </span> */}
+        Work
       </a>
       <a href="/" tabIndex={tabIndex}>
-        <span aria-hidden="true">&#x1f4b8;</span>
-        Pricing
+        {/* <span aria-hidden="true">
+          &#x1f481;&#x1f3fb;&#x200d;&#x2642;&#xfe0f;
+        </span> */}
+        Writing
       </a>
       <a href="/" tabIndex={tabIndex}>
-        <span aria-hidden="true">&#x1f4e9;</span>
+        {/* <span aria-hidden="true">&#x1f4b8;</span> */}
+        About
+      </a>
+      <a href="/" tabIndex={tabIndex}>
+        {/* <span aria-hidden="true">&#x1f4e9;</span> */}
         Contact
       </a>
+      <Link to="/StyleGuide" tabIndex={tabIndex}>
+        {/* <span aria-hidden="true">&#x1f4e9;</span> */}
+        Style Guide
+      </Link>
     </StyledMenu>
   )
 }
